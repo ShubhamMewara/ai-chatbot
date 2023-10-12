@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Montserrat } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon } from "lucide-react";
+import { Braces, Code, ImageIcon, LayoutDashboard, MessageSquare, Music, Settings, VideoIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const montserrate = Montserrat({
@@ -18,11 +18,12 @@ const routes = [
         href : "/dashboard",
         color : "text-sky-500",
     },{
-    //     label : "Conversation",
-    //     icon : MessageSquare,
-    //     href : "/conversation",
-    //     color : "text-violet-500",
-    // },{
+        label : "Conversation",
+        icon : MessageSquare,
+        href : "/conversation",
+        color : "text-violet-500",
+    },
+    // {
     //     label : "Image Generation",
     //     icon : ImageIcon,
     //     href : "/image",
@@ -37,12 +38,19 @@ const routes = [
     //     icon : Music,
     //     href : "/music",
     //     color : "text-emerald-500",
-    // },{
+    // },
+    {
         label : "Code Generation",
         icon : Code,
         href : "/code",
-        color : "text-green-700",
+        color : "text-green-500",
     },{
+        label: 'Code Converter',
+        icon: Braces,
+        href: '/codeconverter',
+        color: "text-emerald-500",
+        bgColor: "bg-green-700/10",
+      },{
         label : "Settings",
         icon : Settings,
         href : "/setting",

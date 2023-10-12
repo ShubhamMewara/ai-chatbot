@@ -1,4 +1,4 @@
-import { Code, ImageIcon, MessageSquare, Music, VideoIcon } from "lucide-react";
+import { Braces, Code, ImageIcon, MessageSquare, Music, VideoIcon } from "lucide-react";
 
 export const MAX_FREE_COUNTS = 5;
 
@@ -38,4 +38,11 @@ export const tools = [
     bgColor: "bg-green-700/10",
     href: '/code',
   },
+  {
+    label: 'Code Converter',
+    icon: Braces,
+    href: '/codeconverter',
+    color: "text-emerald-500",
+    bgColor: "bg-green-700/10",
+  },  
 ];
