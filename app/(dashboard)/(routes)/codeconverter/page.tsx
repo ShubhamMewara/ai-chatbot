@@ -1,7 +1,7 @@
 "use client";
 
 import * as z from "zod";
-import { Braces, MessageSquare } from 'lucide-react'
+import { Braces } from 'lucide-react'
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -19,6 +19,7 @@ import { cn } from "@/lib/utils";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { programinglang } from "./constant"
 import ReactMarkdown from "react-markdown";
+import { toast } from "react-hot-toast";
 
 
 const CodeConverter = () => {
@@ -39,7 +40,7 @@ const CodeConverter = () => {
       setMessages(response)
       form.reset;
     }catch(error: any){
-      console.log(error);
+      // toast.error("Something went wrong");
     }finally{
       router.refresh();
     }
@@ -51,8 +52,8 @@ const CodeConverter = () => {
         title='Code Converter'
         description='Change your code into any another programing language'
         icon={Braces}
-        iconColor='text-emerald-500'
-        bgColor='bg-green-700/10'/>
+        iconColor='text-orange-700'
+        bgColor='bg-orange-700/10'/>
       </div>
       <div className="px-4 lg:px-8">
         <Form {...form}>

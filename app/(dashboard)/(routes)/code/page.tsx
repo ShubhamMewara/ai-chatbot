@@ -17,6 +17,7 @@ import { formSchema } from "./constant"
 import { useRouter } from "next/navigation";
 import { Loader } from "@/components/loader";
 import { cn } from "@/lib/utils";
+import toast from "react-hot-toast";
 
 
 const Codepage = () => {
@@ -37,7 +38,7 @@ const Codepage = () => {
       setMessages(response)
       form.reset;
     }catch(error: any){
-      console.log(error);
+      toast.error("Something went wrong");
     }finally{
       router.refresh();
     }

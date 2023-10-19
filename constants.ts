@@ -42,7 +42,7 @@ export const tools = [
     label: 'Code Converter',
     icon: Braces,
     href: '/codeconverter',
-    color: "text-emerald-500",
-    bgColor: "bg-green-700/10",
+    color: "text-orange-700",
+    bgColor: "bg-orange-700/10",
   },  
 ];
